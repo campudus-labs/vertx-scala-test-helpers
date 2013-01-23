@@ -29,6 +29,7 @@ buildscript {
 apply plugin: 'scala'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
+apply plugin: 'maven'
 apply plugin: 'vertx'
 
 defaultTasks = ['assemble']
@@ -51,6 +52,6 @@ dependencies {
 	compile "junit:junit:$junitVersion"
 	compile("org.vert-x:vertx-testframework:$vertxVersion") { transitive = false }
 	
-	compile "com.campudus:scala-core-helpers:$version"
-	testCompile "com.campudus:scala-core-helpers:$version"
+	compile "com.campudus:vertx-scala-core-helpers:$version"
+	testCompile "com.campudus:vertx-scala-core-helpers:$version"
 }
